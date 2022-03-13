@@ -1,0 +1,13 @@
+[Unit]
+Description=Automatic CRAS
+After=audio.target
+Requires=cras.service
+Requires=acpid.service
+
+[Service]
+User=cras
+Group=cras
+ExecStart=/usr/bin/acras
+
+[Install]
+WantedBy=multi-user.target
