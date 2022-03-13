@@ -50,7 +50,9 @@ int wcras_init(cras_ctx **ctx)
     return ret;
 }
 
-// Get node info of a specific node type.
+/*  Get info of a specific node type.
+ *  Returns 1 on success, 0 when the node was not found
+ *  or a negative errno on failure. */
 int wcras_get_output_node(cras_ctx *ctx, int type, cras_node *node)
 {
     size_t num_devs, num_nodes;

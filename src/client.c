@@ -40,9 +40,7 @@ static void sigterm(int signum)
     clean_exit(0);
 }
 
-/*  Fills node info for headphones and speaker.
- *  Returns 1 on success, 0 when neither the headphones nor the speaker
- *  were found or negative errno on failure. */
+//  Fills node info for headphones and speaker.
 static void get_nodes(cras_node *headphones, cras_node *speaker)
 {
     int ret;
