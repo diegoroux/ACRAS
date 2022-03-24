@@ -22,9 +22,9 @@ install:
 	@echo "INSTALL	acras.service"
 	@install -d $(DESTDIR)$(PREFIX)/lib/systemd/system
 	@install -m 644 etc/acras.service $(DESTDIR)$(PREFIX)/lib/systemd/system/
-	@echo "INSTALL	README"
+	@echo "INSTALL	README.md"
 	@install -d $(DESTDIR)$(PREFIX)/share/doc/acras
-	@install -m 644 README $(DESTDIR)$(PREFIX)/share/doc/acras/
+	@install -m 644 README.md $(DESTDIR)$(PREFIX)/share/doc/acras/
 	@echo "INSTALL	LICENSE"
 	@install -m 644 LICENSE $(DESTDIR)$(PREFIX)/share/doc/acras/
 

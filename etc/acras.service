@@ -1,10 +1,12 @@
 [Unit]
 Description=Automatic CRAS
-After=audio.target
-Requires=cras.service
-Requires=acpid.service
+After=cras.service acpid.service
+Requires=cras.service acpid.service
 
 [Service]
+Type=simple
+Restart=always
+RestartSec=3
 User=cras
 Group=cras
 ExecStart=/usr/bin/acras
